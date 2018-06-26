@@ -5,16 +5,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Banda {
+public class Musico {
 
 	private Long id;
 	
 	private String nombre;
-	private Busqueda busqueda;
-	
-	Banda(String nombre){
-		this.nombre=nombre;
-	}
+	private Postulacion postulacion;
 
 	@GeneratedValue
 	@Id
@@ -26,9 +22,15 @@ public class Banda {
 		this.id = id;
 	}
 	
+	// ¿Un musico crea una o muchas postulaciones?
+	public Postulacion getPostulacion() {
+		return postulacion;
+	}
+
+	public void setPostulacion(Postulacion postulacion) {
+		this.postulacion = postulacion;
+	}
 	
-	
-	
-	
+
 	
 }
