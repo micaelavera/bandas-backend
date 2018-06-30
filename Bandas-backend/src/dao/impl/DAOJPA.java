@@ -4,9 +4,9 @@ import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import dao.impl.EntityManagers;
 
 import dao.DAO;
-
 
 public class DAOJPA<T> implements DAO<T> {
 

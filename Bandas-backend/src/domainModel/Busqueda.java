@@ -1,5 +1,8 @@
 package domainModel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,6 +15,7 @@ public class Busqueda {
 	private String experiencia;
 	private String fechaSugerencia;
 	
+	
 	Busqueda(){
 		
 	}
@@ -20,6 +24,7 @@ public class Busqueda {
 		this.instrumento=instrumento;
 		this.experiencia=experiencia;
 		this.fechaSugerencia=fechaSugerencia;
+		
 	}
 	
 	@GeneratedValue

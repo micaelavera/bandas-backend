@@ -26,19 +26,4 @@ public class Notificacion {
 		this.id = id;
 	}
 	
-	public Postulacion getPostulacion() {
-		return postulacion;
-	}
-	
-	public void setPostulacion(Postulacion postulacion) {
-		this.postulacion = postulacion;
-	}
-	
-	public Busqueda getBusqueda() {
-		return busqueda;
-	}
-	
-	public void setBusqueda(Busqueda busqueda) {
-		this.busqueda = busqueda;
-	}	
 }
