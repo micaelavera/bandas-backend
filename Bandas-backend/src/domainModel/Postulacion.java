@@ -15,8 +15,8 @@ public class Postulacion {
 	}
 	
 	public Postulacion (String generoMusical, String instrumento){
-		this.generoMusical=generoMusical;
-		this.instrumento=instrumento;
+		this.generoMusical = generoMusical;
+		this.instrumento = instrumento;
 	}
 	
 	@GeneratedValue

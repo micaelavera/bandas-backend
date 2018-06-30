@@ -8,13 +8,17 @@ import javax.persistence.Id;
 public class Notificacion {
 
 	private Long id;
-	private Postulacion postulacion;
-	private Busqueda busqueda;
+//private Postulacion postulacion;
+	//private Busqueda busqueda;
 	
-	public Notificacion(Postulacion postulacion,Busqueda busqueda){
-		this.postulacion=postulacion;
-		this.busqueda=busqueda;
+	public Notificacion(){
+		
 	}
+	
+//	public Notificacion(Postulacion postulacion,Busqueda busqueda){
+////		this.postulacion = postulacion;
+////		this.busqueda = busqueda;
+//	}
 	
 	@GeneratedValue
 	@Id

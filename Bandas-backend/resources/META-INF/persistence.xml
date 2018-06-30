@@ -16,8 +16,8 @@
 
       
         <class>domainModel.Busqueda</class>        
-       <!--  <class>domainModel.Notificacion</class>-->
-        <!-- <class>domainModel.Postulacion</class>-->
+        <class>domainModel.Notificacion</class>
+        <class>domainModel.Postulacion</class>
 
         <properties>
 <!--             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
