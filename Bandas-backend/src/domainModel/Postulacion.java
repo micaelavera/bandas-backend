@@ -11,7 +11,10 @@ public class Postulacion {
 	private String generoMusical;
 	private String instrumento;
 
-	Postulacion (String generoMusical, String instrumento){
+	public Postulacion(){
+	}
+	
+	public Postulacion (String generoMusical, String instrumento){
 		this.generoMusical=generoMusical;
 		this.instrumento=instrumento;
 	}

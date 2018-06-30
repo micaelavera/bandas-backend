@@ -1,5 +1,7 @@
 package dao;
 
-public class PostulacionDAO {
+import domainModel.Postulacion;
+
+public interface PostulacionDAO extends DAO <Postulacion>{
 
 }

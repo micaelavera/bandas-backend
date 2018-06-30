@@ -1,5 +1,12 @@
 package services;
 
-public class MatcheoService {
+import java.util.List;
 
+import dao.PostulacionDAO;
+import dao.impl.PostulacionDAOJPA;
+import domainModel.Postulacion;
+
+public class MatcheoService {
+	
+	
 }

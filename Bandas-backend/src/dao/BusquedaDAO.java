@@ -1,5 +1,7 @@
 package dao;
 
-public class BusquedaDAO {
+import domainModel.Busqueda;
+
+public interface BusquedaDAO extends DAO <Busqueda> {
 
 }
