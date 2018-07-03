@@ -53,16 +53,16 @@ public class MatcheoService {
 //					//Se debe crear una notificacion 
 //						//Notificacion nueva
 						Notificacion n1 = new Notificacion(postulacion,busqueda);
-						daoNotificacion.crear(n1);	
-						
-						//nose si hay que hacer esto:
-						postulacion.addNotificacion(n1);
-						busqueda.addNotificacion(n1);
+						daoNotificacion.crear(n1);
+						System.out.println(n1.getPostulacion().getId());
+						System.out.println(n1.getBusqueda().getId());
+				
 					}
 				} 
 			}
 		}
 		daoBusqueda.cerrar();
 		daoPostulacion.cerrar();
+		
 	}
 }
