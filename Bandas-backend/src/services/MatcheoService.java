@@ -36,23 +36,30 @@ public class MatcheoService {
 		for (Busqueda busqueda: busquedas){
 			//Recorremos las postulaciones
 			for(Postulacion postulacion : postulaciones){
-//				NotificacionDAO daoNotificacion = new NotificacionDAOJPA();
-//				List<Notificacion> notificaciones=daoNotificacion.todos();
+				NotificacionDAO daoNotificacion = new NotificacionDAOJPA();
+				List<Notificacion> notificaciones=daoNotificacion.todos();
 				
 				//Comparamos el instrumento de la postulacion con el de la busqueda de la banda
 				if(postulacion.getInstrumento().equals(busqueda.getInstrumento())){
 					System.out.println("Busqueda:"+ busqueda.getInstrumento());
 					System.out.println("Postulacion: "+ postulacion.getInstrumento());
-
-//					if(notificaciones.isEmpty()){
+					
+					//ver
+					Long idBusqueda=busqueda.getId();
+					Long idPostulacion=postulacion.getId();
+					
+					//no se deberian repetir las notificaciones?
+					if(notificaciones.isEmpty()){
 //					//Se debe crear una notificacion 
 //						//Notificacion nueva
-//						Notificacion n1 = new Notificacion(postulacion,busqueda);
-//						daoNotificacion.crear(n1);
-					
+						Notificacion n1 = new Notificacion(postulacion,busqueda);
+						daoNotificacion.crear(n1);	
 						
-//					}
+						//nose si hay que hacer esto:
+						postulacion.addNotificacion(n1);
+						busqueda.addNotificacion(n1);
 					}
+				} 
 			}
 		}
 		daoBusqueda.cerrar();

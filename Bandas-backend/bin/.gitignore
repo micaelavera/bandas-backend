@@ -1,5 +1,3 @@
-/META-INF/
-/domainModel/
-/dao/
-/org/
 /services/
+/domainModel/
+/META-INF/

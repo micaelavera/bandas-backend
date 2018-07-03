@@ -16,7 +16,7 @@ public class Busqueda {
 	private String instrumento;
 	private String experiencia;
 	private String fechaSugerencia;
-//	private List <Notificacion> notificacion;
+	private List <Notificacion> notificaciones;
 	
 	
 	public Busqueda(){
@@ -27,29 +27,37 @@ public class Busqueda {
 		this.instrumento = instrumento;
 		this.experiencia = experiencia;
 		this.fechaSugerencia = fechaSugerencia;
-//		this.notificacion=new ArrayList<Notificacion>();
+		this.notificaciones=new ArrayList<Notificacion>();
 	}
 	
-	
-	
-//	public List<Notificacion> getNotificacion() {
-//		return notificacion;
-//	}
-//
-//	public void setNotificacion(List<Notificacion> notificacion) {
-//		this.notificacion = notificacion;
-//	}
-
 	@GeneratedValue
 	@Id
 	public Long getId() {
 		return id;
+	}
+	@OneToMany(mappedBy = "busqueda", cascade = CascadeType.ALL, orphanRemoval = true)
+	public List<Notificacion> getNotificaciones() {
+		return notificaciones;
+	}
+
+	public void setNotificaciones(List<Notificacion> notificaciones) {
+		this.notificaciones = notificaciones;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 
+	public void addNotificacion(Notificacion notificacion){
+		notificaciones.add(notificacion);
+		notificacion.setBusqueda(this);
+	}
+	
+	public void removeNotificacion(Notificacion notificacion){
+		notificaciones.remove(notificacion);
+		notificacion.setBusqueda(null);
+	}
+	
 	public String getInstrumento() {
 		return instrumento;
 	}
