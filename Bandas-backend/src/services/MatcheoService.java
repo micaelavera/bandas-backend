@@ -44,11 +44,7 @@ public class MatcheoService {
 					System.out.println("Busqueda:"+ busqueda.getInstrumento());
 					System.out.println("Postulacion: "+ postulacion.getInstrumento());
 					
-					//ver
-					Long idBusqueda=busqueda.getId();
-					Long idPostulacion=postulacion.getId();
 					
-					//no se deberian repetir las notificaciones?
 					if(notificaciones.isEmpty()){
 //					//Se debe crear una notificacion 
 //						//Notificacion nueva
